@@ -41,5 +41,12 @@ def create_app(config_name):
     # csrf防护
     CSRFProtect(app)
 
+    # 注册蓝图
+    from info.modules.index import index_blu
+    app.register_blueprint(index_blu)
+
+
+
+
 
     return app
